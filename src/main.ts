@@ -4,13 +4,13 @@ import './registerServiceWorker';
 import router from './router';
 import store from './store';
 import i18n from './lang';
-// import firebase from './firebaseConfig';
+import firebase from './firebase';
 
 Vue.config.productionTip = false;
 
-// firebase.auth().onAuthStateChanged(user => {
-//   store.dispatch('fetchUser', user);
-// });
+firebase.auth().onAuthStateChanged((user: any): void => {
+  store.dispatch('fetchUser', user);
+});
 
 new Vue({
   router: router,
