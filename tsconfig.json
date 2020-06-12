@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "resolveJsonModule": true,
     "target": "esnext",
     "module": "esnext",
     "strict": true,
@@ -13,12 +14,22 @@
     "baseUrl": ".",
     "types": [
       "webpack-env",
-      "jest"
+      "jest",
+      "vuetify"
     ],
     "paths": {
       "@/*": [
         "src/*"
-      ]
+      ],
+      "@/components/*": [
+        "src/components/*.vue"
+      ],
+      "@/views/*": [
+        "src/views/*.vue"
+      ],
+      "@/entity/*": [
+        "src/entities/*.ts"
+      ],
     },
     "lib": [
       "esnext",
