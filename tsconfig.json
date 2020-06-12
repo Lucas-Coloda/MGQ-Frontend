@@ -18,7 +18,16 @@
     "paths": {
       "@/*": [
         "src/*"
-      ]
+      ],
+      "@/components/*": [
+        "src/components/*.vue"
+      ],
+      "@/views/*": [
+        "src/views/*.vue"
+      ],
+      "@/entity/*": [
+        "src/entities/*.ts"
+      ],
     },
     "lib": [
       "esnext",
