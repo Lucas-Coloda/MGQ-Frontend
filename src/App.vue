@@ -1,11 +1,14 @@
 <template>
-  <div id="app">
-    <div v-if="!$store.getters.userLogged">
-      <login v-if="state === LOGIN" @register="state = REGISTER" />
-      <register v-if="state === REGISTER" @login="state = LOGIN" />
-    </div>
-    <router-view v-else />
-  </div>
+  <v-app>
+    <v-app-bar app color='primary' dark></v-app-bar>
+    <v-content v-if='!$store.getters.userLogged'>
+      <login v-if='state === LOGIN' @register='state = REGISTER' />
+      <register v-if='state === REGISTER' @login='state = LOGIN' />
+    </v-content>
+    <v-content v-else>
+      <router-view />
+    </v-content>
+  </v-app>
 </template>
 
 <script>
