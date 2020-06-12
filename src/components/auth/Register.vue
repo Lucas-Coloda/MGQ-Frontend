@@ -3,8 +3,8 @@
     <input v-model='form.name' type='name' />
     <input v-model='form.email' type='email' />
     <input v-model='form.password' type='password' />
-    <!-- <button @click.prevent='submit'>{{$t('SIGNIN')}}</button>
-    <button @click.prevent='login'>{{$t('LOGIN')}}</button> -->
+    <button @click.prevent='submit'>{{$t('SIGNIN')}}</button>
+    <button @click.prevent='login'>{{$t('LOGIN')}}</button>
   </div>
 </template>
 
